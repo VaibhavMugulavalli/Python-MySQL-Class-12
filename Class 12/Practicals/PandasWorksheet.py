@@ -67,13 +67,10 @@ print(sobj1=s21+s22)
 print(sobj1=s21-s22)
 print(sobj1=s21*s22)
 print(sobj1=s21/s22)
+sobj1=s21/s22
 print(sobj1.add(sobj1))
 print(sobj1.sub(sobj1))
 print(sobj1.mul(sobj1))
 print(sobj1.div(sobj1))
 print(sobj1.index)
 print(sobj1.dtype)
-
-
-
-
