@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 #21
 dict1={'Section':['A','B','C','D'],'Contri':[6700,5600,5000,5200]}
 df1=pd.DataFrame(dict1)
@@ -42,7 +43,6 @@ print(zsalesdf)
 #2 15 16
 
 #28
-import numpy as np
 arr1=np.array([[101,113,124],[130,140,200],[115,216,217]])
 dtf3=pd.DataFrame(arr1)
 print(dtf3)
@@ -54,3 +54,39 @@ avg=salaries/staff
 org={'people':staff,'Amount':salaries,'Average':avg}
 dtf5=pd.DataFrame(org)
 print(dtf5)
+
+#Q30 
+df1=pd.DataFrame({'Weight':[42,75, 66],"Age":[15,22,35],"Name":["Arnav","John","Anoop"]})
+print("orignaldataframe \t\t transpose")
+print(df1,'\t\t',df1.T)
+#Q31 
+df2=pd.DataFrame({"toys":[3013,7385,7833,8404],"books":[2312,4368,9072,8473],'uniform':[8093,9371,7323,1237],'shoes':[9173,8912,9835,9127]},index=["Andhra","odisha","H.P","U.P"])
+print("aid for books and uniform")
+print(df2[["books",'uniform']])
+print("aid for shoe")
+print(df2.shoes)
+#Q32
+print(df2.loc[["U.P","H.P"],["shoes","uniform"]])
+#Q34
+import numpy as np
+ser1=pd.Series([8902,8012,12332,79128,72394,19634,873141,870314,130741])
+print(ser1[ser1>50000])
+#Q35
+ser5=pd.Series([8902,8012,12332,79128,72394,19634,873141,870314,130741])
+print(ser5)
+s6=ser5*2
+print(s6)
+print("values in s6>15")
+print(s6[s6>1235])
+#Q36
+df3=pd.DataFrame({"Target":[3013,7385,7833,8404],"Sales":[2312,4368,9072,8473]},index=["zoneA","zoneB","zoneC","zoneD"])
+df3['orders']=[6000,6700,6200,6000]
+df3.loc['zoneE',:]=[50000,45000,50000]
+print(df3)
+#Q37
+df4=pd.DataFrame(df3)
+del df4['Target']
+df4=df4.drop(["zoneA"])
+print(df4)
+#Q38
+print(df3.rename(index={'zoneC':'Central','zoneD':"Dakshin"}, columns={'Target':'Targeted','Sales':'Achived'}))
