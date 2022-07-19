@@ -10,7 +10,6 @@ if ch==1:
     s2 = pd.Series(np.random.randint(0,100,n))
     print(s1)
     print(s2)
-    print("Arithmetic Operations with same index")
     print("Addition:")
     print(s1+s2)
     print("Subtraction:")
@@ -25,7 +24,6 @@ elif ch==2:
     s2 = pd.Series(np.random.randint(0,100,n),index = list(np.random.randint(0,100,n)))
     print(s1)
     print(s2)
-    print("Arithmetic Operations with different index")
     print("Addition:")
     print(s1+s2)
     print("Subtraction:")
@@ -35,4 +33,4 @@ elif ch==2:
     print("Division:")
     print(s1/s2)
 else:
-    print("Invalid Choice!")
+    print("Error 404")

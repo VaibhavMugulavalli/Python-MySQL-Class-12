@@ -1,6 +1,6 @@
 import pandas as pd
 lst=[1,2,3,4,5,6,7,8,9,10]
-S1=pd.Series(lst,index=[1,2,3,4,5,6,7,8,9,10])
+S1=pd.Series(lst,index=['A','B','C','D','E','F','G','H','I','J'])
 print("Sort by:",'\n',"1.Values",'\n',"2.Index")
 x=int(input("Enter option:"))
 if x==1:

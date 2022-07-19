@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-rollno=pd.Series([1,2,3,4,5,6,])
+rollno=pd.Series([1,2,3,4,5,6])
 percentage1=pd.Series(np.random.randint(70,100,6))
 percentage2=pd.Series(np.random.randint(70,100,6))
 percentage3=pd.Series(np.random.randint(70,100,6))
