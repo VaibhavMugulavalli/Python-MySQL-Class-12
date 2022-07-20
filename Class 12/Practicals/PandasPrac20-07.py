@@ -6,12 +6,12 @@ print(temp2)
 s=pd.Series([1,2,3,4,5],index=['A','B','C','D','E'])
 lst=['F','G','H','I','J']
 print(s)
-s.reindex(lst)
+s.index=(lst)
 print(s)
 #Q3
 s1=pd.Series([6700,5600,5000,5200],index=[1,2,3,4])
 print("Original output:",s1)
-s1=pd.Series([6700,5600,8000,5200],index=[1,2.0,3,4])
+s1=pd.Series([6700,5600,8000,5200],index=[1,5,3,4])
 print("Change output:",s1)
 #Q4
 items=pd.DataFrame({'ItemID':['PC01','LC05','PC03','PC06','LC03'],'ItemName':['Personal Computer','Laptop','Personal Computer','Personal Computer','Laptop'],'Manufacturer':['ABC','ABC','XYZ','COMP','PQR'],'Price':[35000,35000,32000,37000,57000]})
@@ -33,7 +33,7 @@ print(items)
 #f
 print(items.loc['PC3'])
 #g
-print(items.loc['INAME','COST'])
+print(items.loc['VENDOR','COST'])
 #h
 print(items.loc['PC3':'LC3'])
 #i
@@ -50,5 +50,5 @@ print("Size:",items.size)
 print("Shape:",items.shape)
 print("Values:",items.values)
 print("Empty?:",items.empty)
-print("No.of Dimensions:",items.ndim)
+print("No of Dimensions:",items.ndim)
 print("Transpose:",items.T)
