@@ -1,5 +1,5 @@
 create table student(T_ID int primary key,
-Name varchar(20,
+Name varchar(20),
 Age int,
 Department varchar(20),
 Date_of_join date,
