@@ -4,8 +4,7 @@ from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 import re
 
-
-def __initTableTitles__(content):
+def initTableTitles(content):
     # Finds all containers having tag = table
     tables=content.findAll('table')
     captionList={}
@@ -31,32 +30,40 @@ def __initTableTitles__(content):
 
     return captionList
 
-def __cleanDFs__(self):
-      self.__initTableTitles__()
-      # Gets all tables in webpage
-      dirtyDF = pd.read_html(self.link)
-      dfDict = {}
-      cleanedTableTitles = []
-      count = 0
-      for (key,caption) in self.tableTitles.items() :
-          if(caption != ' '):
-              dfDict[caption] = dirtyDF[count]
-              cleanedTableTitles.append(caption)
-          count +=1
-      self.Tables = dfDict
-      self.tableTitles = cleanedTableTitles
+def cleanDFs(url,content):
+    captionlist=initTableTitles(content)
+    # Gets all tables in webpage
+    dirtyDF = pd.read_html(url)
+    dfDict = {}
+    cleanedTableTitles = []
+    count = 0
+    for (key,caption) in captionlist.items() :
+        if(caption != ' '):
+            dfDict[caption] = dirtyDF[count]
+            cleanedTableTitles.append(caption)
+        count +=1
+    CleanTable = dfDict
+    
+    return [CleanTable,cleanedTableTitles]
+
+def getTable(url,content):
+    cleaneddata=cleanDFs(url,content)
+    print("-------TABLES--------")
+    tables=cleaneddata[0]
+    captions = cleaneddata[1]
+    count = 1
+    # Prints the options to use for each table
+    for title in captions:
+        print(f"{count} for {title}")
+        count +=1
+    num=int(input("Enter table number:"))
+    return tables[captions[num-1]]
+
+
 url=input("Enter valid url:") #Assigning url
 response = urlopen(url)
 content = BeautifulSoup(response.read(), 'html.parser')
 
-df=pd.read_html(url) #Reading html format of url
-n=len(df) #Finding number of tables in url
-print("Number of tables in webpage:",n)
-x=int(input("Enter table number to be selected:")) #User input
-if x>n: #Logical Block
-    print("Enter correct number of tables")
-else:
-    df_final=df[x-1] #Creating new df from data extracted from url(indexing starts from 0 therfore x-1)
-    print(df_final)
-print(".CSV file:",df_final.to_csv('Scrapped Table CSV')) #Exporting data to CSV file
-print(".XLSX file:",df_final.to_excel("Scrapped Table Excel.xlsx")) #Exporting data to XLSX file
+requireddf=getTable(url,content)
+print(".CSV file:",requireddf.to_csv('Scrapped Table CSV')) #Exporting data to CSV file
+
