@@ -31,9 +31,23 @@ def __initTableTitles__(content):
 
     return captionList
 
-
+def __cleanDFs__(self):
+      self.__initTableTitles__()
+      # Gets all tables in webpage
+      dirtyDF = pd.read_html(self.link)
+      dfDict = {}
+      cleanedTableTitles = []
+      count = 0
+      for (key,caption) in self.tableTitles.items() :
+          if(caption != ' '):
+              dfDict[caption] = dirtyDF[count]
+              cleanedTableTitles.append(caption)
+          count +=1
+      self.Tables = dfDict
+      self.tableTitles = cleanedTableTitles
 url=input("Enter valid url:") #Assigning url
-
+response = urlopen(url)
+content = BeautifulSoup(response.read(), 'html.parser')
 
 df=pd.read_html(url) #Reading html format of url
 n=len(df) #Finding number of tables in url
