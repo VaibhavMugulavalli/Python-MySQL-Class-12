@@ -1,14 +1,36 @@
-,0,1
-0,Formula One logo used from 2018 onwards,Formula One logo used from 2018 onwards
-1,Category,Open-wheel single-seater Formula auto racing
-2,Country,International
-3,Inaugural season,1950
-4,Drivers,20
-5,Teams,10
-6,Chassis manufacturers,10
-7,Engine manufacturers,FerrariMercedesRed BullRenault
-8,Tyre suppliers,Pirelli
-9,Drivers' champion,Max Verstappen (Red Bull Racing)
-10,Constructors' champion,Red Bull Racing
-11,Official website,Formula1.com
-12,Current season,Current season
+,Driver,Titles,Season(s)
+0,Michael Schumacher,7.0,"1994, 1995, 2000, 2001, 2002, 2003, 2004"
+1,Lewis Hamilton,7.0,"2008, 2014, 2015, 2017, 2018, 2019, 2020"
+2,Juan Manuel Fangio,5.0,"1951, 1954, 1955, 1956, 1957"
+3,Alain Prost,4.0,"1985, 1986, 1989, 1993"
+4,Sebastian Vettel,4.0,"2010, 2011, 2012, 2013"
+5,Jack Brabham,3.0,"1959, 1960, 1966"
+6,Jackie Stewart,3.0,"1969, 1971, 1973"
+7,Niki Lauda,3.0,"1975, 1977, 1984"
+8,Nelson Piquet,3.0,"1981, 1983, 1987"
+9,Ayrton Senna,3.0,"1988, 1990, 1991"
+10,Alberto Ascari,2.0,"1952, 1953"
+11,Graham Hill,2.0,"1962, 1968"
+12,Jim Clark,2.0,"1963, 1965"
+13,Emerson Fittipaldi,2.0,"1972, 1974"
+14,Mika Häkkinen,2.0,"1998, 1999"
+15,Fernando Alonso,2.0,"2005, 2006"
+16,Max Verstappen,2.0,"2021, 2022"
+17,Giuseppe Farina,1.0,1950
+18,Mike Hawthorn,1.0,1958
+19,Phil Hill,1.0,1961
+20,John Surtees,1.0,1964
+21,Denny Hulme,1.0,1967
+22,Jochen Rindt,1.0,1970
+23,James Hunt,1.0,1976
+24,Mario Andretti,1.0,1978
+25,Jody Scheckter,1.0,1979
+26,Alan Jones,1.0,1980
+27,Keke Rosberg,1.0,1982
+28,Nigel Mansell,1.0,1992
+29,Damon Hill,1.0,1996
+30,Jacques Villeneuve,1.0,1997
+31,Kimi Räikkönen,1.0,2007
+32,Jenson Button,1.0,2009
+33,Nico Rosberg,1.0,2016
+34,34 drivers,,73 titles

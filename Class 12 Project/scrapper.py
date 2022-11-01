@@ -13,6 +13,7 @@ def initTableTitles(content):
     for table in tables:
         # Querying through each table to find all <caption></caption> tags which is conventionally used to assign table title
         captions = list(table.findAll('caption'))
+        print(captions)
         # Handler for captions returning None/empty list
         if len(captions):
             caption = captions[0]
@@ -51,6 +52,7 @@ def getTable(url,content):
     print("-------TABLES--------")
     tables=cleaneddata[0]
     captions = cleaneddata[1]
+    print(captions)
     count = 1
     # Prints the options to use for each table
     for title in captions:
