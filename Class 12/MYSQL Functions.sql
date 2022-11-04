@@ -35,3 +35,10 @@ select trim(ename) as 'trimmed ename' from employee;
 select ename,count(ename) as 'total',instr(ename,'a') as 'a in ename' from employee;	
 select sysdate();
 select right(date(),8);
+select dayname('2004-09-15'),monthname('2004-09-15'),dayofyear('2004-09-15');
+select ename,round(comm,0) as 'rounded comm' from employee;
+select ename,instr(ename,'ta') as 'ename with tr' from employee;
+#
+select dayofweek(hiredate),dayofmonth(hiredate),monthname(hiredate);
+select now();
+select ename,job,sal,hiredate from employee where hiredate between '1990-05-20' and '1991-12-31' order by hiredate;
