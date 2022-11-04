@@ -37,8 +37,11 @@ select sysdate();
 select right(date(),8);
 select dayname('2004-09-15'),monthname('2004-09-15'),dayofyear('2004-09-15');
 select ename,round(comm,0) as 'rounded comm' from employee;
-select ename,instr(ename,'ta') as 'ename with tr' from employee;
+select ename,instr(ename,'ta') as 'ename with ta' from employee;
 #
 select dayofweek(hiredate),dayofmonth(hiredate),monthname(hiredate);
 select now();
 select ename,job,sal,hiredate from employee where hiredate between '1990-05-20' and '1991-12-31' order by hiredate;
+select year(curdate()),hiredate,concat(curdate,hiredate) as 'curentdate and hiredate' from employee where job like 'analyst';
+select hiredate+10 from employee;
+
