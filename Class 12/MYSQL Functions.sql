@@ -44,4 +44,5 @@ select now();
 select ename,job,sal,hiredate from employee where hiredate between '1990-05-20' and '1991-12-31' order by hiredate;
 select year(curdate()),hiredate,concat(curdate,hiredate) as 'curentdate and hiredate' from employee where job like 'analyst';
 select hiredate+10 from employee;
-
+#
+select mod(sal,2) "modulus";
