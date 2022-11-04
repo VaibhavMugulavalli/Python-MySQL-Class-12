@@ -32,3 +32,6 @@ select substr(ename,3,7) from employee where ename like 's%';
 select ename,job,round(sal,1) as 'round' from employee;
 select ename,job,sal,sal*12 as 'annual sal' from employee;
 select trim(ename) as 'trimmed ename' from employee;
+select ename,count(ename) as 'total',instr(ename,'a') as 'a in ename' from employee;	
+select sysdate();
+select right(date(),8);
