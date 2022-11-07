@@ -53,7 +53,7 @@ select mod(sal,2) "modulus";
 create database ExamDB;
 
 #Q2
-create table exam(AdmnNO varchar(4),sname varchar(20),percentage float,class varchar(3),stream varchar(15))
+create table exam(AdmnNO varchar(4),sname varchar(20),percentage float,class varchar(3),stream varchar(15));
 
 #Q3
 select*from exam order by sname desc;
