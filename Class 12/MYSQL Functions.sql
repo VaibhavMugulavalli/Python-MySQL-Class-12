@@ -159,7 +159,7 @@ SELECT CONCAT(LOWER('CLASS'),UPPER('XII'));
 
 #MySQL 4
 #Q1
-create database empno;
+create database empdb;
 #Q2
 insert into employee (ecode,ename,salary,job,city)
  values('R001','Vijay',NULL,'Manager','Delhi'),
