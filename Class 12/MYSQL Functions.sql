@@ -155,5 +155,18 @@ SELECT CONCAT(LOWER('CLASS'),UPPER('XII'));
 #3. date(),monthname(),month() 
 #4. upper()
 
+#MySQL 3
 
+#MySQL 4
+#Q1
+create database empno;
+#Q2
+insert into employee (ecode,ename,salary,job,city)
+ values('R001','Vijay',NULL,'Manager','Delhi'),
+ ('R002','Miara',45000,'Executive','Jaipur'),
+ ('R003','Shristi',60000,'Analyst','Bengaluru'),
+ ('R004','Sushanth',NULL,'Manager','Bengaluru'),
+ ('R005','Riya',60000,'Accountant','Kanpur'),
+ ('R006','Reena',55000,'Service','Kanpur'),
+ ('R007','Siara',36700,'Clerk','Delhi');
 
