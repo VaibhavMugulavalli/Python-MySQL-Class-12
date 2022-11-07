@@ -1,3 +1,4 @@
+#MySQL 1
 create table employee(empno int,
 ename varchar(20),
 job varchar(20),
@@ -46,3 +47,113 @@ select year(curdate()),hiredate,concat(curdate,hiredate) as 'curentdate and hire
 select hiredate+10 from employee;
 #
 select mod(sal,2) "modulus";
+
+#MySQL 2
+#Q1
+create database ExamDB;
+
+#Q2
+create table exam(AdmnNO varchar(4),sname varchar(20),percentage float,class varchar(3),stream varchar(15))
+
+#Q3
+select*from exam order by sname desc;
+select concat(ucase(sname),percentage) from exam;
+select substr(sname,2,3) from exam where stream='commerce';
+select sname,stream,concat(sname,stream) as NAMEE from exam;
+select*from exam where stream='science' and percentage<90;
+select left(sname,3) from exam where percentage>80 and percentage<90;
+select right(sname,3) from exam where percentage<70 and stream='commerce';
+select length(sname) from exam;
+select instr(stream,'m') from exam;
+select*from exam where sname like '%i%';
+select instr(sname,'ia') from exam;
+ select substr(sname,3) from exam;
+ select pow(6,3);
+
+ #Q4
+ SELECT POW(2,3);
++----------+
+| POW(2,3) |
++----------+
+|        8 |
++----------+
+
+ SELECT ROUND(123.2345, 1), ROUND(342.9234,0);
++--------------------+-------------------+
+| ROUND(123.2345, 1) | ROUND(342.9234,0) |
++--------------------+-------------------+
+|              123.2 |               343 |
++--------------------+-------------------+
+
+ SELECT LENGTH('Informatics Practices');
++---------------------------------+
+| LENGTH('Informatics Practices') |
++---------------------------------+
+|                              21 |
++---------------------------------+
+
+
+mysql> SELECT YEAR("1979/11/26"), MONTH("1979/11/26"), DAY("1979/11/26");
++--------------------+---------------------+-------------------+
+| YEAR("1979/11/26") | MONTH("1979/11/26") | DAY("1979/11/26") |
++--------------------+---------------------+-------------------+
+|               1979 |                  11 |                26 |
++--------------------+---------------------+-------------------+
+
+ SELECT MONTHNAME("1979/11/26");
++-------------------------+
+| MONTHNAME("1979/11/26") |
++-------------------------+
+| November                |
++-------------------------+
+
+SELECT LEFT('INDIA',3), RIGHT('Computer Science',4);
++-----------------+-----------------------------+
+| LEFT('INDIA',3) | RIGHT('Computer Science',4) |
++-----------------+-----------------------------+
+| IND             | ence                        |
++-----------------+-----------------------------+
+
+ SELECT substr('Informatics',3,4), SUBSTR('Practices',3);
++---------------------------+-----------------------+
+| substr('Informatics',3,4) | SUBSTR('Practices',3) |
++---------------------------+-----------------------+
+| form                      | actices               |
++---------------------------+-----------------------+
+
+ SELECT SYSDATE() , CURDATE() , NOW() ;
++---------------------+------------+---------------------+
+| SYSDATE()           | CURDATE()  | NOW()               |
++---------------------+------------+---------------------+
+| 2022-11-04 14:23:39 | 2022-11-04 | 2022-11-04 14:23:39 |
++---------------------+------------+---------------------+
+
+ SELECT LCASE('IP CLASS 11 TH ');
++--------------------------+
+| LCASE('IP CLASS 11 TH ') |
++--------------------------+
+| ip class 11 th           |
++--------------------------+
+
+SELECT CONCAT(LOWER('CLASS'),UPPER('XII'));
++-------------------------------------+
+| CONCAT(LOWER('CLASS'),UPPER('XII')) |
++-------------------------------------+
+| classXII                            |
++-------------------------------------+
+
+ SELECT MONTHNAME(CURDATE()) ,DAYNAME(CURDATE());
++----------------------+--------------------+
+| MONTHNAME(CURDATE()) | DAYNAME(CURDATE()) |
++----------------------+--------------------+
+| November             | Friday             |
++----------------------+--------------------+
+
+#Q5
+#1. dayname() 
+#2. substr() 
+#3. date(),monthname(),month() 
+#4. upper()
+
+
+
