@@ -155,17 +155,20 @@ SELECT CONCAT(LOWER('CLASS'),UPPER('XII'));
 #3. date(),monthname(),month() 
 #4. upper()
 
+
+
+
 #MySQL 3
+
+
+
 
 #MySQL 4
 #Q1
-CREATE TABLE EMPLOYEE(
+create database empdb;
+
 #Q2
-ECODE CHAR(4) PRIMARY KEY,
-ENAME VARCHAR(20),
-SALARY INTEGER,
-JOB VARCHAR(10),
-CITY VARCHAR(10));
+create table employee(ecode char(4) primary key,ename varchar(20),salary int,job varchar(10),city varchar(10));
 insert into employee values('R001','Vijay',NULL,'Manager','Delhi');
 insert into employee values('R002','Miara',45000,'Executive','Jaipur');
 insert into employee values('R003','Shristi',60000,'Analyst','Bengaluru');
@@ -173,6 +176,7 @@ insert into employee values('R004','Sushanth',NULL,'Manager','Bengaluru');
 INSERT INTO EMPLOYEE VALUES('R005','Riya',60000,'Accountant','Kanpur');
 INSERT INTO EMPLOYEE VALUES('R006','Reena',55000,'Service','Kanpur');
 INSERT INTO EMPLOYEE VALUES('R007','Siara',36700,'Clerk','Delhi');
+
 #Q3
 #1
 select sum(salary) from employee;
