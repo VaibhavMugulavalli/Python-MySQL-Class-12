@@ -24,26 +24,46 @@ values(8369,'Smith','Clerk',8902,'1990-12-18',800.00,null,20),
 (8934,'Mita','Clerk',8882,'1992-01-23',1300.00,null,10);
 
 select concat(empno,ename) as "full name "from employee;
+
 select upper(ename) as 'upper' from employee;
+
 select upper(ename) as 'upper',lower(ename) as 'lower' from employee where deptno=10;
+
 select concat(upper(ename),lower(job)) as 'joint' from employee;
+
 select substr(ename,1,5),sal from employee order by ename desc;
+
 select right(ename,3),sal from employee where sal between 2500 and 5000;
+
 select substr(ename,3,7) from employee where ename like 's%';
+
 select ename,job,round(sal,1) as 'round' from employee;
+
 select ename,job,sal,sal*12 as 'annual sal' from employee;
+
 select trim(ename) as 'trimmed ename' from employee;
+
 select ename,count(ename) as 'total',instr(ename,'a') as 'a in ename' from employee;	
+
 select sysdate();
+
 select right(date(),8);
+
 select dayname('2004-09-15'),monthname('2004-09-15'),dayofyear('2004-09-15');
+
 select ename,round(comm,0) as 'rounded comm' from employee;
+
 select ename,instr(ename,'ta') as 'ename with ta' from employee;
+
 #
 select dayofweek(hiredate),dayofmonth(hiredate),monthname(hiredate);
+
 select now();
+
 select ename,job,sal,hiredate from employee where hiredate between '1990-05-20' and '1991-12-31' order by hiredate;
+
 select year(curdate()),hiredate,concat(curdate,hiredate) as 'curentdate and hiredate' from employee where job like 'analyst';
+
 select hiredate+10 from employee;
 #
 select mod(sal,2) "modulus";
@@ -57,17 +77,29 @@ create table exam(AdmnNO varchar(4),sname varchar(20),percentage float,class var
 
 #Q3
 select*from exam order by sname desc;
+
 select concat(ucase(sname),percentage) from exam;
+
 select substr(sname,2,3) from exam where stream='commerce';
+
 select sname,stream,concat(sname,stream) as NAMEE from exam;
+
 select*from exam where stream='science' and percentage<90;
+
 select left(sname,3) from exam where percentage>80 and percentage<90;
+
 select right(sname,3) from exam where percentage<70 and stream='commerce';
+
 select length(sname) from exam;
+
 select instr(stream,'m') from exam;
+
 select*from exam where sname like '%i%';
+
 select instr(sname,'ia') from exam;
+
  select substr(sname,3) from exam;
+
  select pow(6,3);
 
  #Q4
@@ -173,9 +205,9 @@ insert into employee values('R001','Vijay',NULL,'Manager','Delhi');
 insert into employee values('R002','Miara',45000,'Executive','Jaipur');
 insert into employee values('R003','Shristi',60000,'Analyst','Bengaluru');
 insert into employee values('R004','Sushanth',NULL,'Manager','Bengaluru');  
-INSERT INTO EMPLOYEE VALUES('R005','Riya',60000,'Accountant','Kanpur');
-INSERT INTO EMPLOYEE VALUES('R006','Reena',55000,'Service','Kanpur');
-INSERT INTO EMPLOYEE VALUES('R007','Siara',36700,'Clerk','Delhi');
+insert into employee values('R005','Riya',60000,'Accountant','Kanpur');
+insert into employee values('R006','Reena',55000,'Service','Kanpur');
+insert into employee values('R007','Siara',36700,'Clerk','Delhi');
 
 #Q3
 #1
