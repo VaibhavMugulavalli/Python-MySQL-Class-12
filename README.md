@@ -4,4 +4,4 @@ This repo is for class 12 IP students from NHVPS
 
 Github for Dummies:https://docs.github.com/en/get-started/quickstart/create-a-repo#create-a-repository
 
-Credits to all students of XII B 2022-23
+Credits to Arnav,Himanshu,Shreesha,Prathiksha
