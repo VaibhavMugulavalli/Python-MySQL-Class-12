@@ -1,8 +1,6 @@
 import pandas as pd #importing pandas library
 from urllib.request import urlopen
-from urllib.error import HTTPError
 from bs4 import BeautifulSoup
-import re
 
 def initTableTitles(content):
     # Finds all containers having tag = table
@@ -12,6 +10,8 @@ def initTableTitles(content):
     
     for table in tables:
         # Querying through each table to find all <caption></caption> tags which is conventionally used to assign table title
+        if(not len(table.find('thead'))):
+            break
         captions = list(table.findAll('caption'))
         print(captions)
         # Handler for captions returning None/empty list
