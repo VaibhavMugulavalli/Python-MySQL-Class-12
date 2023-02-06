@@ -1,7 +1,7 @@
 import pandas as pd #importing pandas
-from urllib.request import urlopen #importing urllib
+from urllib.request import urlopen #importing urllib(used in opening of URLs)
 from bs4 import BeautifulSoup #importing bs4
-import re 
+import re #importing regular expression(Provides a framework for search patterns)
 
 def initTableTitles(content): # Finds all containers having tag=table
     tables=content.findAll('table')
