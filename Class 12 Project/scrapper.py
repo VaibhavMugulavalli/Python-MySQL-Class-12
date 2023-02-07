@@ -65,3 +65,11 @@ response = urlopen(url)
 content = BeautifulSoup(response.read(), 'html.parser') #parsing URL 
 requireddf=getTable(url,content)
 print(".CSV file:",requireddf.to_csv('Scrapped Table CSV')) #Exporting data to CSV file
+
+
+
+#Test URL's
+#https://en.wikipedia.org/wiki/Lists_of_earthquakes
+#https://en.wikipedia.org/wiki/List_of_unicorn_startup_companies
+#https://en.wikipedia.org/wiki/List_of_Test_cricket_records
+#https://en.wikipedia.org/wiki/List_of_Formula_One_Grand_Prix_winners
